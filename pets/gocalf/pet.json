@@ -1,0 +1,28 @@
+{
+  "id": "gocalf",
+  "name": "Gocalf",
+  "stickerMap": {
+    "idle": {
+      "stickers": ["idle-1.webp", "idle-2.webp"],
+      "rotateInterval": 60000
+    },
+    "thinking": {
+      "stickers": ["thinking-1.webp"],
+      "rotateInterval": 10000
+    },
+    "needs_input": {
+      "stickers": ["needs_input-1.webp"],
+      "rotateInterval": 10000
+    },
+    "complete": {
+      "stickers": ["complete-1.webp"],
+      "rotateInterval": 10000
+    },
+    "error": {
+      "stickers": ["error-1.webp"],
+      "rotateInterval": 10000
+    }
+  },
+  "size": 120,
+  "stickerSize": 100
+}
