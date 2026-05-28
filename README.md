@@ -7,7 +7,7 @@ A collection of publicly shareable AI skills and resources.
 | Skill | Description |
 |-------|-------------|
 | [dictionary](skills/dictionary/SKILL.md) | Explain the meaning of a word or phrase in both English and Chinese. |
-| [english-improver](skills/english-improver/SKILL.md) | Translates, spelling-corrects, and improves text into polished English. Returns only the refined text. |
+| [refine-english](skills/refine-english/SKILL.md) | Translates, spelling-corrects, and improves text into polished English. Returns only the refined text. |
 
 ## Pets
 

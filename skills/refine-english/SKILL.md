@@ -1,5 +1,5 @@
 ---
-name: "english-improver"
+name: "refine-english"
 description: "Translates, spelling corrects, and improves text into polished English. Returns only the refined text."
 ---
 
