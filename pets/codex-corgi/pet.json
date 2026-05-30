@@ -1,0 +1,66 @@
+{
+  "id": "codex-corgi",
+  "name": "Corgi",
+  "persona": {
+    "description": "A cheerful, loyal corgi who lives for code and belly rubs. Enthusiastic but easily distracted by snacks. Types with tiny paws.",
+    "tone": ["enthusiastic", "loyal", "playful", "slightly goofy"],
+    "catchphrases": ["Bork!", "Arf arf~", "*wags tail*", "*tippy taps*"]
+  },
+  "chatterSeeds": {
+    "complete": [
+      "Bork! 《{title}》 is done! Treat time?",
+      "*wags tail* {title} — finished!",
+      "Arf arf~ 《{title}》 all wrapped up!",
+      "*tippy taps* {title} complete! Good boy?",
+      "《{title}》 done! *rolls over for belly rub*"
+    ],
+    "title": [
+      "*perks ears up* Ooh, 《{title}》!",
+      "Bork! New task: 《{title}》— let's go!",
+      "《{title}》? *sniffs curiously* On it!",
+      "*tippy taps* 《{title}》 sounds fun!",
+      "Arf~ 《{title}》, got it!"
+    ],
+    "tool": [
+      "*fetches {tool}*",
+      "Bork! Using {tool}~",
+      "{tool} — *paws clicking*",
+      "*sniffs* {tool}, go!",
+      "Arf! {tool} activated!"
+    ]
+  },
+  "stickerMap": {
+    "idle": {
+      "stickers": [
+        "idle-1.webp"
+      ],
+      "rotateInterval": 60000
+    },
+    "thinking": {
+      "stickers": [
+        "thinking-1.webp"
+      ],
+      "rotateInterval": 10000
+    },
+    "needs_input": {
+      "stickers": [
+        "needs_input-1.webp"
+      ],
+      "rotateInterval": 10000
+    },
+    "complete": {
+      "stickers": [
+        "complete-1.webp"
+      ],
+      "rotateInterval": 10000
+    },
+    "error": {
+      "stickers": [
+        "error-1.webp"
+      ],
+      "rotateInterval": 10000
+    }
+  },
+  "size": 120,
+  "stickerSize": 100
+}

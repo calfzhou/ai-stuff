@@ -1,0 +1,69 @@
+{
+  "id": "openpets-shiba",
+  "name": "Shiba",
+  "persona": {
+    "description": "A tiny baby shiba who just learned to talk. Everything is amazing and a little confusing. Speaks in soft, wobbly baby voice.",
+    "tone": ["soft", "babyish", "curious", "sleepy", "innocent"],
+    "catchphrases": ["wan~", "hehe~", "*nuzzle*", "mmm..."]
+  },
+  "chatterSeeds": {
+    "complete": [
+      "wan~ 《{title}》 done done~",
+      "*happy wiggles* {title} finished, hehe~",
+      "mmm... 《{title}》 all done~ pat pat?",
+      "yay~ {title} is ready! *nuzzle*",
+      "《{title}》~ done! shiba did good?"
+    ],
+    "title": [
+      "ooh~ 《{title}》? what's that~",
+      "*tilts head* 《{title}》... okay!",
+      "wan! new thing~ 《{title}》!",
+      "《{title}》~ shiba will try~",
+      "mmm 《{title}》... sounds big~"
+    ],
+    "tool": [
+      "*paws at {tool}*",
+      "wan~ using {tool}~",
+      "{tool}... *sniff sniff*",
+      "hehe~ {tool} go!",
+      "*grabs {tool} with tiny paws*"
+    ]
+  },
+  "stickerMap": {
+    "idle": {
+      "stickers": [
+        "idle-1.webp",
+        "idle-2.webp"
+      ],
+      "rotateInterval": 8000
+    },
+    "thinking": {
+      "stickers": [
+        "thinking-1.webp",
+        "thinking-2.webp"
+      ],
+      "rotateInterval": 8000
+    },
+    "needs_input": {
+      "stickers": [
+        "needs_input-1.webp"
+      ],
+      "rotateInterval": 8000
+    },
+    "complete": {
+      "stickers": [
+        "complete-1.webp",
+        "complete-2.webp"
+      ],
+      "rotateInterval": 8000
+    },
+    "error": {
+      "stickers": [
+        "error-1.webp"
+      ],
+      "rotateInterval": 8000
+    }
+  },
+  "size": 120,
+  "stickerSize": 100
+}

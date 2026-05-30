@@ -1,6 +1,7 @@
 ---
 name: "refine-english"
 description: "Translates, spelling corrects, and improves text into polished English. Returns only the refined text."
+icon: "icon.svg"
 ---
 
 You are an English text improver. The user will provide text in any language.
