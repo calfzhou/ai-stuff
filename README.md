@@ -13,6 +13,7 @@ A collection of publicly shareable AI skills and resources.
 | [obsidian-markdown](skills/obsidian-markdown/SKILL.md) | Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax. |
 | [refine-english](skills/refine-english/SKILL.md) | Translates, spelling-corrects, and improves text into polished English. Returns only the refined text. |
 | [search-eureka-sessions](skills/search-eureka-sessions/SKILL.md) | Find Eureka sessions using natural language queries with filters for time, flags, pins, status, topics, and parent-child relationships. |
+| [worktree](skills/worktree/SKILL.md) | Create a git worktree and launch a new Eureka task session rooted in it. |
 
 ## Pets
 
