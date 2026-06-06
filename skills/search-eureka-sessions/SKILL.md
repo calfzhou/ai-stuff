@@ -12,12 +12,13 @@ Search and find Eureka sessions (COS sessions, task sessions, and sub-agents) us
 
 Eureka sessions live in two directories under the workspace root (`~/.eureka/workspaces/{workspaceId}/`):
 
-- **`cos-sessions/{id}/session.jsonl`** — Top-level COS (Chief of Staff) sessions. These are the main conversation threads the user sees.
-- **`sessions/{id}/session.jsonl`** — Task sessions and sub-agent sessions spawned by COS sessions.
+- `cos-sessions/{id}/session.jsonl` — Top-level COS (Chief of Staff) sessions. These are the main conversation threads the user sees.
+- `sessions/{id}/session.jsonl` — Task sessions and sub-agent sessions spawned by COS sessions.
 
 Each `session.jsonl` is JSONL format. **Line 1** is the `SessionHeader` (JSON metadata). Lines 2+ are messages.
 
 ### Session ID Format
+
 `YYMMDD-adjective-noun` (e.g., `260525-early-inlet`). The date prefix is the creation date.
 
 ### Session Header Fields (Line 1)
@@ -82,7 +83,8 @@ WS_ROOT = find_workspace_root()
 
 Read **only line 1** from each `session.jsonl` to get metadata.
 
-**CRITICAL — Windows compatibility:**
+CRITICAL — Windows compatibility:
+
 - Always use `python3` (not inline python via `-c` which breaks on Windows batch shells).
 - Always write Python scripts to a temp file first, then execute.
 - Always open files with `encoding='utf-8'` — sessions contain Chinese and other non-ASCII text.
@@ -112,6 +114,7 @@ for pattern in [
 ```
 
 **IMPORTANT:** Always write the Python script to a `.py` file first, then run it:
+
 ```bash
 cat > "$TEMP/search_sessions.py" << 'PYEOF'
 # ... script content ...
@@ -125,41 +128,45 @@ python3 "$TEMP/search_sessions.py"
 
 Parse the user's natural language query into filters:
 
-**Topic/keyword search** — Match against `name` and `preview` fields (case-insensitive). For deeper search, read message content from JSONL lines 2+.
+Topic/keyword search — Match against `name` and `preview` fields (case-insensitive). For deeper search, read message content from JSONL lines 2+.
 
-**Time range** — Parse relative dates ("last week", "yesterday", "May 2026") and compare against `createdAt` or `lastUsedAt` timestamps.
+Time range — Parse relative dates ("last week", "yesterday", "May 2026") and compare against `createdAt` or `lastUsedAt` timestamps.
 
-**Flags/pins** — Filter by `isFlagged: true` or `isPinned: true`.
+Flags/pins — Filter by `isFlagged: true` or `isPinned: true`.
 
-**Status** — Filter by `todoState` values: `todo`, `in-progress`, `needs-review`, `done`, `cancelled`.
+Status — Filter by `todoState` values: `todo`, `in-progress`, `needs-review`, `done`, `cancelled`.
 
-**Session type** — Filter by `type`: `cos` (main conversations), `task` (background tasks), `sub-agent`, `runner` (scheduled).
+Session type — Filter by `type`: `cos` (main conversations), `task` (background tasks), `sub-agent`, `runner` (scheduled).
 
-**Parent-child** — Use `parentSessionId` to find sub-agents of a task, or tasks spawned by a COS session.
+Parent-child — Use `parentSessionId` to find sub-agents of a task, or tasks spawned by a COS session.
 
-**Engine/model** — Filter by `engine` or `model` fields.
+Engine/model — Filter by `engine` or `model` fields.
 
-**Source** — Filter by `source` field (app, teams, slack, etc.).
+Source — Filter by `source` field (app, teams, slack, etc.).
 
-**Cost/usage** — Sort or filter by `tokenUsage.costUsd` or `tokenUsage.totalTokens`.
+Cost/usage — Sort or filter by `tokenUsage.costUsd` or `tokenUsage.totalTokens`.
 
 ### Step 4: Rank results
 
 Rank results by a combined relevance score:
-1. **Keyword match strength** — exact match in name > partial match in name > match in preview > match in message content
-2. **Recency** — more recently used sessions score higher
-3. **Message count / engagement** — sessions with more messages may be more substantive
+
+1. Keyword match strength — exact match in name > partial match in name > match in preview > match in message content
+2. Recency — more recently used sessions score higher
+3. Message count / engagement — sessions with more messages may be more substantive
 
 ### Step 5: Present results
 
 **CRITICAL — Clickable session links:**
+
 Use the `task://` protocol to make session names clickable. In markdown output, format links as:
-```
+
+```markdown
 [Session Name](task://session-id)
 ```
+
 This creates a clickable link that navigates directly to the session in Eureka.
 
-**For top results (top 1-3 by relevance)**, show rich detail with snippets:
+For top results (top 1-3 by relevance), show rich detail with snippets:
 
 ```markdown
 1. [Session Name](task://session-id)
@@ -168,14 +175,15 @@ This creates a clickable link that navigates directly to the session in Eureka.
    Match: Show the matched keyword context — which fields matched and relevant snippets.
 ```
 
-**For remaining results**, show a compact list:
+For remaining results, show a compact list:
 
 ```markdown
 1. [Session Name](task://session-id)
    Summary: one-line based on preview/name
 ```
 
-**For deep content matches**, also show message snippet context:
+For deep content matches, also show message snippet context:
+
 - When a keyword was found inside message bodies (not just name/preview), show the surrounding context with the match highlighted in backticks or bold.
 
 Always show results in the user's timezone (Asia/Shanghai).
