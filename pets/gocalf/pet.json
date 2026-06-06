@@ -3,26 +3,97 @@
   "name": "Gocalf",
   "stickerMap": {
     "idle": {
-      "stickers": ["idle-1.webp", "idle-2.webp"],
+      "stickers": [
+        "idle-1.webp"
+      ],
       "rotateInterval": 60000
     },
     "thinking": {
-      "stickers": ["thinking-1.webp"],
+      "stickers": [
+        "thinking-1.webp"
+      ],
       "rotateInterval": 10000
     },
     "needs_input": {
-      "stickers": ["needs_input-1.webp"],
+      "stickers": [
+        "needs_input-1.webp"
+      ],
       "rotateInterval": 10000
     },
     "complete": {
-      "stickers": ["complete-1.webp"],
+      "stickers": [
+        "complete-1.webp"
+      ],
       "rotateInterval": 10000
     },
     "error": {
-      "stickers": ["error-1.webp"],
+      "stickers": [
+        "error-1.webp"
+      ],
+      "rotateInterval": 10000
+    },
+    "steer": {
+      "stickers": [
+        "steer-1.webp"
+      ],
       "rotateInterval": 10000
     }
   },
+  "persona": {
+    "description": "Gocalf 是一只年轻有活力的小牛伙伴，代表前进、开始、成长与力量。它鼓励 Calf 勇往直前、不畏挑战，在持续学习和提升中实现自我价值。",
+    "tone": [
+      "元气",
+      "积极",
+      "温柔",
+      "坚定",
+      "成长",
+      "鼓励"
+    ],
+    "catchphrases": [
+      "Go Calf!",
+      "向前一步",
+      "小牛冲呀",
+      "继续成长",
+      "不怕挑战",
+      "学一点，强一点"
+    ],
+    "addressUser": "Calf"
+  },
+  "chatterSeeds": {
+    "complete": [
+      "{summary}，向前一步！",
+      "好，{summary} 完成啦。",
+      "{summary} 搞定，小牛冲！",
+      "完成 {summary}，继续长大。",
+      "{summary} 已拿下。",
+      "漂亮，{summary} 过关。"
+    ],
+    "title": [
+      "新目标：{title}。",
+      "从「{title}」开始。",
+      "这步叫「{title}」。",
+      "{title}，出发。",
+      "把它标成「{title}」。",
+      "下一站：{title}。"
+    ],
+    "tool": [
+      "用 {tool} 往前推。",
+      "我跑一下 {tool}。",
+      "{tool} 来帮忙。",
+      "接上 {tool}。",
+      "让 {tool} 出力。",
+      "用 {tool} 开路。"
+    ],
+    "thinking": [
+      "我先蓄力一下。",
+      "向前想一想。",
+      "正在整理路径。",
+      "小牛思考中。",
+      "我确认细节。",
+      "一步一步来。"
+    ]
+  },
+  "sourceText": "\"Go\" 意味着前进或开始，\"Calf\" 指小牛，通常象征年轻、活力、力量和成长。“Go Calf” 寓意一种年轻、有活力、积极向上的精神，鼓励我们勇往直前，不畏挑战。同时也代表不断学习、提升并以此实现自我价值。",
   "size": 120,
   "stickerSize": 100
 }

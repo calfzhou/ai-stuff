@@ -21,7 +21,7 @@ A collection of publicly shareable AI skills and resources.
 |-----|-------------|
 | [codex-corgi](pets/codex-corgi/) | Corgi - a cheerful, loyal Eureka desktop pet for coding sessions. |
 | [eureka](pets/eureka/) | Eureka - a logo-based Eureka desktop pet with tracked source files for future adjustment. |
-| [gocalf](pets/gocalf/) | Gocalf - an Eureka desktop pet generated from the logo of [gocalf.com](https://gocalf.com/) (the pet's home). |
+| [gocalf](pets/gocalf/) | Gocalf - an Eureka desktop pet generated from the logo of [gocalf.com](https://gocalf.com/) with tracked source files. |
 | [openpets-shiba](pets/openpets-shiba/) | Shiba - a tiny baby shiba Eureka desktop pet adapted from OpenPets. |
 
 To install a pet, copy its folder to `~/.eureka/pets/`.
