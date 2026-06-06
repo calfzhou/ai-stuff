@@ -15,6 +15,7 @@ Then select `Eureka` in Settings > Appearance > Desktop Pet. If it is already se
 ## Contents
 
 - `pet.json` and `stickers/` are the installable Eureka desktop pet files.
+- `preview.png` shows the first frame for each desktop pet state.
 - `source/generate_codex_pet.py` generates the Codex-style spritesheet source.
 - `source/generate_eureka_pet.py` generates the Eureka desktop pet frame SVGs and manifest.
 - `source/concepts/` keeps the editable face concept and comparison render.
