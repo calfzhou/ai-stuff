@@ -104,7 +104,7 @@ def sticker_svg(frame: dict[str, float | str]) -> str:
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {TARGET} {TARGET}" width="{TARGET}" height="{TARGET}" role="img" aria-label="Gocalf desktop pet sticker frame">
   <defs>
     <style>
-      .body-rim {{ fill: none; stroke: #f8fbff; stroke-width: 1.7; stroke-linejoin: round; stroke-linecap: round; }}
+      .body-rim {{ fill: none; stroke: #f8fbff; stroke-width: 0.95; stroke-linejoin: round; stroke-linecap: round; }}
       .body {{ fill: #3370ff; fill-rule: nonzero; }}
     </style>
   </defs>

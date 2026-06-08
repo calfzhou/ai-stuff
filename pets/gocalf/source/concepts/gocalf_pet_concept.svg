@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gocalf desktop pet concept v6">
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gocalf desktop pet concept v8">
   <defs>
     <style>
       .body-rim {
         fill: none;
         stroke: #f8fbff;
-        stroke-width: 1.7;
+        stroke-width: 0.95;
         stroke-linejoin: round;
         stroke-linecap: round;
       }
@@ -40,23 +40,23 @@
     </g>
   </g>
 
-  <g id="v1-face-lower-mouth">
-    <ellipse cx="357" cy="304" rx="58" ry="70" fill="#f8fbff" stroke="#f8fbff" stroke-width="24"/>
-    <ellipse cx="357" cy="304" rx="58" ry="70" fill="#f8fbff" stroke="#15171d" stroke-width="18"/>
-    <circle cx="375" cy="321" r="21" fill="#15171d"/>
-    <circle cx="384" cy="309" r="8" fill="#f8fbff"/>
+  <g id="v8-thinner-rim-higher-brows-thinner-mouth">
+    <ellipse cx="337" cy="306" rx="60" ry="72" fill="#f8fbff" stroke="#f8fbff" stroke-width="32"/>
+    <ellipse cx="337" cy="306" rx="60" ry="72" fill="#f8fbff" stroke="#15171d" stroke-width="25"/>
+    <circle cx="356" cy="324" r="23" fill="#15171d"/>
+    <circle cx="366" cy="311" r="9" fill="#f8fbff"/>
 
-    <ellipse cx="570" cy="310" rx="58" ry="70" fill="#f8fbff" stroke="#f8fbff" stroke-width="24"/>
-    <ellipse cx="570" cy="310" rx="58" ry="70" fill="#f8fbff" stroke="#15171d" stroke-width="18"/>
-    <circle cx="552" cy="327" r="21" fill="#15171d"/>
-    <circle cx="561" cy="315" r="8" fill="#f8fbff"/>
+    <ellipse cx="594" cy="312" rx="60" ry="72" fill="#f8fbff" stroke="#f8fbff" stroke-width="32"/>
+    <ellipse cx="594" cy="312" rx="60" ry="72" fill="#f8fbff" stroke="#15171d" stroke-width="25"/>
+    <circle cx="575" cy="330" r="23" fill="#15171d"/>
+    <circle cx="585" cy="317" r="9" fill="#f8fbff"/>
 
-    <path class="guard" stroke-width="32" d="M 301 236 C 334 205 389 207 429 241"/>
-    <path class="guard" stroke-width="32" d="M 502 245 C 542 213 599 221 634 260"/>
-    <path class="face" stroke-width="19" d="M 301 236 C 334 205 389 207 429 241"/>
-    <path class="face" stroke-width="19" d="M 502 245 C 542 213 599 221 634 260"/>
+    <path class="guard" stroke-width="34" d="M 260 185 C 302 149 371 155 424 196"/>
+    <path class="guard" stroke-width="34" d="M 520 197 C 565 158 633 168 684 219"/>
+    <path class="face" stroke-width="21" d="M 260 185 C 302 149 371 155 424 196"/>
+    <path class="face" stroke-width="21" d="M 520 197 C 565 158 633 168 684 219"/>
 
-    <path class="guard" stroke-width="40" d="M 356 836 C 415 887 527 874 589 812"/>
-    <path class="face" stroke-width="24" d="M 356 836 C 415 887 527 874 589 812"/>
+    <path class="guard" stroke-width="38" d="M 355 868 C 421 927 544 909 613 842"/>
+    <path class="face" stroke-width="23" d="M 355 868 C 421 927 544 909 613 842"/>
   </g>
 </svg>

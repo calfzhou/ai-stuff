@@ -17,11 +17,10 @@ Then select `Gocalf` in Settings > Appearance > Desktop Pet. If it is already se
 ## Contents
 
 - `pet.json` and `stickers/` are the installable Eureka desktop pet files.
-- `preview.png` shows the first frame for each desktop pet state.
 - `source/generate_gocalf_codex_pet.py` generates the Codex-style spritesheet source.
 - `source/generate_gocalf_eureka_pet.py` generates the Eureka desktop pet frame SVGs, manifest, and local install copy.
 - `source/concepts/` keeps the approved concept and comparison render.
-- `source/codex-pet/` keeps the Codex pet spritesheet package and grid preview.
+- `source/codex-pet/` keeps the Codex pet spritesheet package.
 
 ## Regenerate
 

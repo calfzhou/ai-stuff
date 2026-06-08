@@ -67,15 +67,15 @@ def eye(cx: float, cy: float, look_x: float, look_y: float, blink: float = 0.0) 
     if blink >= 0.95:
         return f"""
           <path d="M {cx - 51:.1f} {cy:.1f} C {cx - 18:.1f} {cy + 18:.1f} {cx + 18:.1f} {cy + 18:.1f} {cx + 51:.1f} {cy:.1f}"
-            fill="none" stroke="#f8fbff" stroke-width="28" stroke-linecap="round"/>
+            fill="none" stroke="#f8fbff" stroke-width="32" stroke-linecap="round"/>
           <path d="M {cx - 51:.1f} {cy:.1f} C {cx - 18:.1f} {cy + 18:.1f} {cx + 18:.1f} {cy + 18:.1f} {cx + 51:.1f} {cy:.1f}"
-            fill="none" stroke="#15171d" stroke-width="18" stroke-linecap="round"/>
+            fill="none" stroke="#15171d" stroke-width="21" stroke-linecap="round"/>
         """
     ry = 70 * (1.0 - blink * 0.74)
     pupil_r = max(8.0, 21 * (1.0 - blink * 0.55))
     return f"""
-      <ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="58" ry="{ry:.1f}" fill="#f8fbff" stroke="#f8fbff" stroke-width="24"/>
-      <ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="58" ry="{ry:.1f}" fill="#f8fbff" stroke="#15171d" stroke-width="18"/>
+      <ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="58" ry="{ry:.1f}" fill="#f8fbff" stroke="#f8fbff" stroke-width="32"/>
+      <ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="58" ry="{ry:.1f}" fill="#f8fbff" stroke="#15171d" stroke-width="25"/>
       <circle cx="{cx + look_x:.1f}" cy="{cy + look_y:.1f}" r="{pupil_r:.1f}" fill="#15171d"/>
       <circle cx="{cx + look_x + 9:.1f}" cy="{cy + look_y - 12:.1f}" r="{max(3.0, pupil_r * 0.38):.1f}" fill="#f8fbff"/>
     """
@@ -83,40 +83,40 @@ def eye(cx: float, cy: float, look_x: float, look_y: float, blink: float = 0.0) 
 
 def brows(kind: str = "friendly") -> str:
     if kind == "focused":
-        left = ("M 295 233 C 331 205 389 208 434 242", "M 502 249 C 543 221 603 230 642 270")
+        left = ("M 272 189 C 314 159 382 164 431 202", "M 511 205 C 555 172 622 182 670 228")
     elif kind == "sad":
-        left = ("M 301 246 C 337 274 393 278 433 252", "M 505 264 C 552 291 610 276 642 238")
+        left = ("M 284 203 C 323 227 386 232 432 210", "M 516 222 C 564 244 629 232 668 196")
     elif kind == "alert":
-        left = ("M 290 225 C 326 191 390 195 435 234", "M 498 236 C 543 202 607 211 649 258")
+        left = ("M 260 185 C 302 149 371 155 424 196", "M 520 197 C 565 158 633 168 684 219")
     else:
-        left = ("M 301 236 C 334 205 389 207 429 241", "M 502 245 C 542 213 599 221 634 260")
+        left = ("M 260 185 C 302 149 371 155 424 196", "M 520 197 C 565 158 633 168 684 219")
     return f"""
-      <path d="{left[0]}" fill="none" stroke="#f8fbff" stroke-width="32" stroke-linecap="round"/>
-      <path d="{left[1]}" fill="none" stroke="#f8fbff" stroke-width="32" stroke-linecap="round"/>
-      <path d="{left[0]}" fill="none" stroke="#15171d" stroke-width="19" stroke-linecap="round"/>
-      <path d="{left[1]}" fill="none" stroke="#15171d" stroke-width="19" stroke-linecap="round"/>
+      <path d="{left[0]}" fill="none" stroke="#f8fbff" stroke-width="34" stroke-linecap="round"/>
+      <path d="{left[1]}" fill="none" stroke="#f8fbff" stroke-width="34" stroke-linecap="round"/>
+      <path d="{left[0]}" fill="none" stroke="#15171d" stroke-width="21" stroke-linecap="round"/>
+      <path d="{left[1]}" fill="none" stroke="#15171d" stroke-width="21" stroke-linecap="round"/>
     """
 
 
 def mouth(kind: str = "smile") -> str:
     if kind == "open":
         return """
-          <path d="M 356 832 C 414 894 529 881 594 812" fill="none" stroke="#f8fbff" stroke-width="42" stroke-linecap="round"/>
-          <path d="M 356 832 C 414 894 529 881 594 812" fill="none" stroke="#15171d" stroke-width="25" stroke-linecap="round"/>
+          <path d="M 355 868 C 421 927 544 909 613 842" fill="none" stroke="#f8fbff" stroke-width="38" stroke-linecap="round"/>
+          <path d="M 355 868 C 421 927 544 909 613 842" fill="none" stroke="#15171d" stroke-width="23" stroke-linecap="round"/>
         """
     if kind == "frown":
         return """
-          <path d="M 365 856 C 428 801 526 795 588 843" fill="none" stroke="#f8fbff" stroke-width="40" stroke-linecap="round"/>
-          <path d="M 365 856 C 428 801 526 795 588 843" fill="none" stroke="#15171d" stroke-width="24" stroke-linecap="round"/>
+          <path d="M 365 878 C 428 823 526 817 588 865" fill="none" stroke="#f8fbff" stroke-width="38" stroke-linecap="round"/>
+          <path d="M 365 878 C 428 823 526 817 588 865" fill="none" stroke="#15171d" stroke-width="23" stroke-linecap="round"/>
         """
     if kind == "flat":
         return """
-          <path d="M 366 836 C 430 850 523 839 586 815" fill="none" stroke="#f8fbff" stroke-width="38" stroke-linecap="round"/>
-          <path d="M 366 836 C 430 850 523 839 586 815" fill="none" stroke="#15171d" stroke-width="23" stroke-linecap="round"/>
+          <path d="M 366 858 C 430 872 523 861 586 837" fill="none" stroke="#f8fbff" stroke-width="36" stroke-linecap="round"/>
+          <path d="M 366 858 C 430 872 523 861 586 837" fill="none" stroke="#15171d" stroke-width="22" stroke-linecap="round"/>
         """
     return """
-      <path d="M 356 836 C 415 887 527 874 589 812" fill="none" stroke="#f8fbff" stroke-width="40" stroke-linecap="round"/>
-      <path d="M 356 836 C 415 887 527 874 589 812" fill="none" stroke="#15171d" stroke-width="24" stroke-linecap="round"/>
+      <path d="M 355 868 C 421 927 544 909 613 842" fill="none" stroke="#f8fbff" stroke-width="38" stroke-linecap="round"/>
+      <path d="M 355 868 C 421 927 544 909 613 842" fill="none" stroke="#15171d" stroke-width="23" stroke-linecap="round"/>
     """
 
 
@@ -272,7 +272,7 @@ def build_sheet() -> str:
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {SHEET_W} {SHEET_H}" width="{SHEET_W}" height="{SHEET_H}" role="img" aria-label="Gocalf Codex Pet spritesheet">
   <defs>
     <style>
-      .body-rim {{ fill: none; stroke: #f8fbff; stroke-width: 1.7; stroke-linejoin: round; stroke-linecap: round; }}
+      .body-rim {{ fill: none; stroke: #f8fbff; stroke-width: 0.95; stroke-linejoin: round; stroke-linecap: round; }}
       .body {{ fill: #3370ff; fill-rule: nonzero; }}
     </style>
   </defs>
