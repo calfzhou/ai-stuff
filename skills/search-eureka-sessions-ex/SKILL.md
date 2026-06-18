@@ -1,5 +1,5 @@
 ---
-name: "search-eureka-sessions"
+name: "search-eureka-sessions-ex"
 description: "Find Eureka sessions using natural language queries with filters for time, flags, pins, status, topics, and parent-child relationships"
 alwaysAllow: ["Bash", "Read", "Glob", "Grep"]
 ---
