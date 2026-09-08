@@ -87,7 +87,13 @@ Endpoints:
   `messageCount`, `updatedAt` (epoch ms), `workspaceId`, `isPinned`,
   `isFlagged`. Already filtered to real tasks (no sub-agents, no schedule
   jobs, no cos sessions). Use it ONLY to verify the user-named ids and to
-  read current titles - never to choose tasks.
+  read current titles - never to choose tasks. `workspaceId` + `id` also
+  build the task's deep link (see step 5).
+
+Task deep link: `eureka://workspaces/{workspaceId}/sessions/{taskId}` - the
+same URL the task context menu's "Copy Link" produces. Render every task you
+mention in chat as a markdown link `[title](eureka://...)` so the user can
+jump straight to it from the conversation.
 - `GET /api/tasks/{id}/messages?limit=20` -> `data.session.messages[]` plus
   `data.pageInfo`. Wire quirk: the role is in the `type` field
   (`user`/`assistant`/`tool`), not `role`. Older pages: pass
@@ -115,14 +121,17 @@ Endpoints:
    Use `limit=1` reads plus `before`-pagination to walk back to older user
    messages without pulling tool spam. Skip assistant thinking blocks.
 4. Generate one title per task with the rules below.
-5. Propose. Present a table: task id, current title, proposed title. For more
-   than one task this confirmation is mandatory. For a single task, still
-   show the proposal; apply immediately only if the user pre-authorized it.
+5. Propose. Present a table: task (deep link), current title, proposed
+   title. For more than one task this confirmation is mandatory. For a single
+   task, still show the proposal; apply immediately only if the user
+   pre-authorized it.
 6. Apply. `PATCH` each confirmed task sequentially (a ~150 ms pause between
-   calls is plenty). Report per-task success/failure with the final title.
+   calls is plenty). Report per-task success/failure with the final title and
+   the task's deep link, so the user can jump to it and eyeball the result.
 7. If the user wants a record of a multi-task run, write a small markdown
    summary into a timestamped folder `regenerate-task-title_YYYYMMDD_HHMMSS/` in the
-   working directory. Do not create files for single renames.
+   working directory, with each task's deep link included. Do not create
+   files for single renames.
 
 ## Title quality rules
 
