@@ -1,1 +1,4 @@
 .DS_Store
+
+# Private, machine-local Eureka profile notes
+/eureka-notes/local/

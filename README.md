@@ -18,6 +18,10 @@ A collection of publicly shareable AI skills and resources.
 | [search-eureka-sessions-ex](skills/search-eureka-sessions-ex/SKILL.md) | Find Eureka sessions using natural language queries with filters for time, flags, pins, status, topics, and parent-child relationships. |
 | [worktree](skills/worktree/SKILL.md) | Create a git worktree and launch a new Eureka task session rooted in it. |
 
+## Eureka Personal Notes
+
+[Portable profile notes](eureka-notes/README.md) separate shareable preferences from Windows-only guidance and private, machine-local settings. Includes setup instructions and a local template; private notes are not tracked.
+
 ## Pets
 
 | Pet | Description |
