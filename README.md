@@ -11,6 +11,7 @@ A collection of publicly shareable AI skills and resources.
 | [obsidian-canvas](skills/obsidian-canvas/SKILL.md) | Create and edit JSON Canvas (`.canvas`) files with nodes, edges, groups, and connections. |
 | [obsidian-cli](skills/obsidian-cli/SKILL.md) | Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, and properties. |
 | [obsidian-markdown](skills/obsidian-markdown/SKILL.md) | Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax. |
+| [pdf-print-prep](skills/pdf-print-prep/SKILL.md) | Prepare two print-friendly PDFs: flatten the original appearance and remove confirmed colored drawing overlays before flattening a clean version. |
 | [ponytail](skills/ponytail/SKILL.md) | Explicit, task-scoped guidance for minimal, maintainable implementation and refinement, with lite, full, and ultra levels. |
 | [ponytail-review](skills/ponytail-review/SKILL.md) | Explicit, read-only complexity review with concrete simplification proposals that preserve required behavior. |
 | [refine-english](skills/refine-english/SKILL.md) | Translates, spelling-corrects, and improves text into polished English. Returns only the refined text. |
